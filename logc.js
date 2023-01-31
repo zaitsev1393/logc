@@ -48,7 +48,7 @@ const createHandler = () => {
   }
 }
 
-const wrapLog =
+export const wrapLog =
   ((defaultDivider = "*", defaultTabLength = 3) =>
     (msg, divider = defaultDivider) => {
       const div = divider ? divider[0] : defaultDivider;
@@ -67,9 +67,7 @@ const formatLogs =
 
 
 
-const logc = new Proxy(LogBox, createHandler());
-
-module.exports = logc;
+export const logc = new Proxy(LogBox, createHandler());
 
 
 
