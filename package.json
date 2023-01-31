@@ -1,0 +1,23 @@
+{
+  "name": "loggc",
+  "version": "1.0.0",
+  "description": "Minimalistic to be package for colorful console logs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaitsev1393/logc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaitsev1393/logc/issues"
+  },
+  "homepage": "https://github.com/zaitsev1393/logc#readme",
+  "dependencies": {
+    "npm-packlist": "^7.0.4"
+  }
+}

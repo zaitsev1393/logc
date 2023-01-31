@@ -9,7 +9,7 @@ const Colors = {
   Indigo:    { background: "#3a1772", color: "#FFFFFF" }
 }
 
-export function log(str, options = {}) {
+const log = (str, options = {}) => {
   if(!Object.keys(options).length) return console.log(str);
 
   const payload = options['payload'] ?? '';
@@ -17,9 +17,9 @@ export function log(str, options = {}) {
   return console.log(`%c ${ str } `, styles, payload);
 }
 
-export const createLogger =
+const createLogger =
   (styles = {}) =>
-    (message, payload: any = {}) =>
+    (message, payload = {}) =>
       log(message, { ...styles, ...{ payload: payload }});
 
 const LogBox = {
@@ -48,9 +48,7 @@ const createHandler = () => {
   }
 }
 
-export const logc = new Proxy(LogBox, createHandler());
-
-export const wrapLog =
+const wrapLog =
   ((defaultDivider = "*", defaultTabLength = 3) =>
     (msg, divider = defaultDivider) => {
       const div = divider ? divider[0] : defaultDivider;
@@ -67,7 +65,11 @@ const formatLogs =
       .filter(([key, value]) => key != 'payload')
       .reduce((str, v) => str += `${ v[0] }: ${ v[1] }; `, '');
 
-if(!(<any> window).logc)    (<any> window).logc = logc;
-if(!(<any> window).wrapLog) (<any> window).wrapLog = wrapLog;
-if(!(<any> window).log)     (<any> window).log = log;
+
+
+const logc = new Proxy(LogBox, createHandler());
+
+module.exports = logc;
+
+
 
