@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/zaitsev1393/logc/issues"
   },
-  "homepage": "https://github.com/zaitsev1393/logc#readme",
-  "dependencies": {
-    "npm-packlist": "^7.0.4"
-  }
+  "homepage": "https://github.com/zaitsev1393/logc#readme"
 }
