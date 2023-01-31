@@ -1,6 +1,6 @@
 {
   "name": "loggc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimalistic to be package for colorful console logs.",
   "main": "index.js",
   "scripts": {
